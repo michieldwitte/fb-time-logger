@@ -14,6 +14,19 @@ to find your facebook username click here:<br>
 https://www.facebook.com/username<br>
 
 ###linux cpu-usage fix:<br>
+#####Dirty fix: <br>
+get the gloox code from http://camaya.net/gloox/download and extract it,<br>
+go into the src folder and edit the connectiontcpbase.cpp like here<br>
+http://camaya.net/glooxlist/dev/msg01191.html<br>
+just change the recv(10) to recv(-1)<br>
+./configure --without-gnutls --without-examples --without-tests<br>
+copy the src folder to the fb-time-logger folder<br>
+edit the MyRosterLogger.h and change "gloox/*.h" to "src/*.h"<br>
+copy the config.h in the src directory to config.h.unix in the src directory<br>
+g++ -o fbl *.cpp src/*.cpp<br>
+And you're done !
+
+#####Less dirty fix?: <br>
 get the gloox code from http://camaya.net/gloox/download and extract it,<br>
 go into the src folder and edit the connectiontcpbase.cpp like here<br>
 http://camaya.net/glooxlist/dev/msg01191.html<br>
