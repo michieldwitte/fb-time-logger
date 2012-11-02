@@ -23,7 +23,7 @@ just change the recv(10) to recv(-1)<br>
 copy the src folder to the fb-time-logger folder<br>
 edit the MyRosterLogger.h and change "gloox/\*.h" to "src/\*.h"<br>
 copy the config.h in the src directory to config.h.unix in the src directory<br>
-g++ -o fbl *.cpp src/*.cpp<br>
+g++ -o fbl \*.cpp src/\*.cpp<br>
 And you're done !
 
 #####Less dirty fix?: <br>
